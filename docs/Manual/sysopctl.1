@@ -1,0 +1,65 @@
+.TH SYSOPCTL 1 "September 2024" "sysopctl v0.1.0" "System Administration"
+.SH NAME
+sysopctl \- A custom command for managing system resources and tasks
+.SH SYNOPSIS
+.B sysopctl
+[\fB--help\fR | \fB--version\fR]
+[\fBservice\fR \fIcommand\fR [\fIname\fR]]
+[\fBsystem\fR \fIcommand\fR]
+[\fBdisk\fR \fIcommand\fR]
+[\fBprocess\fR \fIcommand\fR]
+[\fBlogs\fR \fIcommand\fR]
+[\fBbackup\fR \fIpath\fR]
+.SH DESCRIPTION
+.B sysopctl
+is a custom command-line utility for managing various system resources and tasks. It allows users to interact with system services, monitor processes, check system load, analyze logs, and backup files.
+.PP
+The command supports the following operations:
+.TP
+.BR "\-\-help"
+Displays this help message.
+.TP
+.BR "\-\-version"
+Displays the version information.
+.TP
+.BR "service list"
+Lists all active services.
+.TP
+.BR "service start " <service-name>
+Starts the specified service.
+.TP
+.BR "service stop " <service-name>
+Stops the specified service.
+.TP
+.BR "system load"
+Displays the current system load averages.
+.TP
+.BR "disk usage"
+Displays disk usage statistics by partition.
+.TP
+.BR "process monitor"
+Monitors system processes in real time.
+.TP
+.BR "logs analyze"
+Analyzes and displays recent critical log entries.
+.TP
+.BR "backup " <path>
+Backs up the specified directory using \fBrsync\fR.
+.SH EXAMPLES
+.TP
+.B sysopctl service list
+Lists all active services on the system.
+.TP
+.B sysopctl system load
+Displays the current system load averages.
+.TP
+.B sysopctl backup /home/user/data
+Backs up the /home/user/data directory.
+.SH AUTHOR
+sysopctl was written by [Your Name].
+.SH "SEE ALSO"
+.BR systemctl (1),
+.BR df (1),
+.BR top (1),
+.BR rsync (1),
+.BR journalctl (1)
